@@ -1,4 +1,4 @@
-# Sentiment Polarity Classification
+# Polarity Classification
 
 This project aims to classify the sentiment polarity (positive or negative) of text using two machine learning models: ***Support Vector Machine (SVM)*** and ***Multinomial Naive Bayes (NB)***. The classification is performed using the Term Frequency-Inverse Document Frequency (TF-IDF) technique for feature extraction from text.
 
@@ -22,15 +22,41 @@ The data is divided into:
 - *Validation set*: 500 samples from both positive and negative data.
 - *Test set*: Remaining samples from both positive and negative data.
 
+
+
 ## Project Usage 
+To extract Data
+```
+run extract.py
+```
+To create .csv files(follow below two steps)
+```
+run make_data.py
+```
+```
+FILE: make_data.py
+
+# # To create positive.csv
+# input_file = r"Data\rt-polaritydata\rt-polarity.pos"
+# output_file = 'positive.csv'
+
+# To create negative.csv
+input_file = r"Data\rt-polaritydata\rt-polarity.neg"
+output_file = 'negative.csv'
+
+
+Uncomment 'input_file' and 'output_file' 
 ```
 Clone the Repository
+```
+git clone https://github.com/Parshantkumar2033/NLP_assignment1.git
 ```
 ```
 Navigate to the Project Directory
 ```
+Install Dependencies 
 ```
-Install Dependencies pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ```
 python -u "<path-to-directory>polarity.py"
